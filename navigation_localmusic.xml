@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_viewgroup_button"
+    android:minHeight="@dimen/navigation_localmusic_height" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:duplicateParentState="true"
+        android:paddingBottom="@dimen/navigation_localmusic_vertical_padding"
+        android:paddingLeft="@dimen/navigation_localmusic_horizontal_padding"
+        android:paddingRight="@dimen/navigation_localmusic_horizontal_padding"
+        android:paddingTop="@dimen/navigation_localmusic_vertical_padding" >
+
+        <View
+            android:id="@+id/vertical_divider"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/localmusic_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:duplicateParentState="true"
+            android:paddingTop="10dip"
+            android:gravity="center_vertical"
+            android:text="@string/navigation_local_music"
+            android:textColor="@color/navigation_primary_text"
+            android:textSize="@dimen/textLargeSize" />
+
+        <TextView
+            android:id="@+id/localmusic_bubble_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/localmusic_text"
+            android:layout_alignTop="@id/localmusic_text"
+            android:background="@drawable/img_navigation_bubble"
+            android:gravity="center"
+            android:paddingLeft="2dip"
+            android:paddingRight="2dip"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textMinSize" />
+
+        <com.kugou.android.common.widget.ScanningImageView
+            android:id="@+id/scanning_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="7dip"
+            android:layout_alignBottom="@id/localmusic_text"
+            android:layout_toRightOf="@id/localmusic_text"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/scanning_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="7dip"
+            android:layout_alignBottom="@id/localmusic_text"
+            android:layout_toRightOf="@id/scanning_icon"
+            android:duplicateParentState="true"
+            android:gravity="center_vertical"
+            android:textColor="@color/navigation_secondary_text"
+            android:textSize="@dimen/textMediumSize" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/navigation_localmusic_play"
+        android:layout_width="@dimen/navigation_localmusic_height"
+        android:layout_height="@dimen/navigation_localmusic_height"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/btn_default_bg"
+        android:scaleType="centerInside"
+        android:src="@drawable/btn_navigation_localmusic_play" />
+
+</RelativeLayout>
